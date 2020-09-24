@@ -214,4 +214,22 @@
 
 		});
 
+	$window.on('load', function () {
+
+		$('.col-4').poptrox({
+			caption: function ($a) { return $a.next('h3').text(); },
+			overlayColor: '#2c2c2c',
+			overlayOpacity: 0.85,
+			popupCloserText: '',
+			popupLoaderText: '',
+			selector: '.work-item a.image',
+			usePopupCaption: false,
+			usePopupDefaultStyling: false,
+			usePopupEasyClose: false,
+			usePopupNav: true,
+			windowMargin: (breakpoints.active('<=narrower') ? 0 : 50)
+		});
+
+	});
+
 })(jQuery);
